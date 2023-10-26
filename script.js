@@ -2,8 +2,8 @@
 function Person(name, age) {
 	 this.name = name;
 	this.age = age;
-	this.greet(){
-		console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+	this.greet = function(){
+		console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);	
 	}
 }
 
@@ -11,7 +11,7 @@ Employee.__proto__ = Person.prototype;
 function Employee(name, age, jobTitle) {
 	Person.call(this, name, age);
 	this.jobTitle = jobTitle;
-	this.jobGreet(){
+ 	this.jobGreet = function(){
 		console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`)
 	}
 }
